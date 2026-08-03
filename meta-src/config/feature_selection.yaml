@@ -1,0 +1,11 @@
+selectors:
+  select_k_best:
+    class: SelectKBest
+    module: sklearn.feature_selection
+    function: [f_regr, mutual_info_regression]
+    k_values: [30]
+  # all:
+  #   param: null
+  random:
+    seed: 42
+    n: [30]

@@ -1,0 +1,8 @@
+scikit-learn
+notebook
+seaborn
+pandas
+pingouin
+scikit-posthocs
+tsfresh
+dask

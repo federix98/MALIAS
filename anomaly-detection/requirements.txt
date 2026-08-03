@@ -1,0 +1,5 @@
+pandas
+EasyTSAD
+torchinfo
+torch
+statsmodels

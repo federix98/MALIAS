@@ -1,0 +1,86 @@
+{
+    "tasks": {
+        "steady-state": {
+            "task_type": "steady-state",
+            "objective": "maximize",
+            "metric_name": "balanced_accuracy",
+            "metric_id": "bal_acc",
+            "datasets": [
+                {
+                    "dataset_id": "jmh",
+                    "feature_path": "data/features/mapped_features_JMH.csv",
+                    "selected_feature_path": "data/features/selected_JMH.csv",
+                    "metric_path": "data/metrics/fbeta.2_jmh.csv",
+                    "group_split": "#",
+                    "frequency": "100ms",
+                    "average_timeseries_budget": 33
+                },
+                {
+                    "dataset_id": "VMs",
+                    "feature_path": "data/features/mapped_features_VMs.csv",
+                    "selected_feature_path": "data/features/selected_VMs.csv",
+                    "metric_path": "data/metrics/fbeta.2_VMs.csv",
+                    "group_split": "#",
+                    "frequency": "100ms",
+                    "average_timeseries_budget": 34
+                }
+            ]
+        },
+        "timeseries-forecasting": {
+            "task_type": "timeseries-forecasting",
+            "objective": "minimize",
+            "metric_name": "symmetrical_mean_absolute_percentage_error",
+            "metric_id": "smape",
+            "datasets": [
+                {
+                    "dataset_id": "WSD_3k",
+                    "original_feature_path": "data/features/extracted_features_WSD_3k.csv",
+                    "feature_path": "data/features/formatted_features_WSD_3k.csv",
+                    "selected_feature_path": "data/features/selected_WSD_3k.csv",
+                    "metric_path": "data/metrics/WSD_3k_metrics.csv",
+                    "group_split": null,
+                    "frequency": "s",
+                    "average_timeseries_budget": 276
+                },
+                {
+                    "dataset_id": "AzFuncInvoke",
+                    "original_feature_path": "data/features/extracted_features_azure10min.csv",
+                    "feature_path": "data/features/formatted_features_azure10min.csv",
+                    "selected_feature_path": "data/features/selected_azure.csv",
+                    "metric_path": "data/metrics/Azure_metrics.csv",
+                    "group_split": null,
+                    "frequency": "min",
+                    "average_timeseries_budget": 169
+                }
+            ]
+        },
+        "anomaly-detection": {
+            "task_type": "anomaly-detection",
+            "objective": "maximize",
+            "metric_name": "area_under_precision_recall_curve",
+            "metric_id": "auprc",
+            "datasets": [
+                {
+                    "dataset_id": "AIOps",
+                    "original_feature_path": "data/features/extracted_features_AIOPS.csv",
+                    "feature_path": "data/features/formatted_features_AIOPS.csv",
+                    "selected_feature_path": "data/features/selected_AIOPS.csv",
+                    "metric_path": "data/metrics/AIOPS_metrics.csv",
+                    "group_split": null,
+                    "frequency": "s",
+                    "average_timeseries_budget": 1733
+                },
+                {
+                    "dataset_id": "WSD",
+                    "original_feature_path": "data/features/extracted_features_WSD.csv",
+                    "feature_path": "data/features/formatted_features_WSD.csv",
+                    "selected_feature_path": "data/features/selected_WSD.csv",
+                    "metric_path": "data/metrics/WSD_metrics.csv",
+                    "group_split": null,
+                    "frequency": "s",
+                    "average_timeseries_budget": 534
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+pandas
+jsonlines
+statsmodels
+torch
+toml
+matplotlib
+scikit-learn
+torchinfo
+more-itertools
+torchmetrics
+# automl
+autogluon

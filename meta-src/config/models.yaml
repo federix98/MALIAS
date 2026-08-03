@@ -1,0 +1,17 @@
+models:
+  linear:
+    class: LinearRegression
+    module: sklearn.linear_model
+    use_random_state: False
+  knn:
+    class: KNeighborsRegressor
+    module: sklearn.neighbors
+    use_random_state: False
+  decision_tree:
+    class: DecisionTreeRegressor
+    module: sklearn.tree
+    use_random_state: True
+  random_forest:
+      class: RandomForestRegressor
+      module: sklearn.ensemble
+      use_random_state: True

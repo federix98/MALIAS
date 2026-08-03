@@ -1,0 +1,25 @@
+models:
+  linear:
+    class: LinearRegression
+    module: sklearn.linear_model
+    use_random_state: False
+    param_grid:
+      fit_intercept: [True, False]
+      positive: [True, False]
+  knn:
+    class: KNeighborsRegressor
+    module: sklearn.neighbors
+    use_random_state: False
+    param_grid:
+      n_neighbors: [3, 5, 7, 11]
+      weights: ['uniform', 'distance']
+      p: [1, 2]
+  decision_tree:
+    class: DecisionTreeRegressor
+    module: sklearn.tree
+    use_random_state: True
+    param_grid:
+      max_depth: [null, 5, 10, 20]
+      min_samples_split: [2, 5, 10]
+      min_samples_leaf: [1, 2, 4]
+      criterion: ['squared_error', 'absolute_error']
