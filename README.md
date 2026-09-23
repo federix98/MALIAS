@@ -190,3 +190,11 @@ Hyperparameters tuned for each regression model and their search spaces for each
 </tr>
 </tbody>
 </table>
+
+
+## License
+
+The source code in this repository is released under the [MIT License](LICENSE).
+
+The extracted meta-features are derived from third-party datasets (AFD, WSD, AIOPS,
+JMD, VMD), which remain subject to their original licenses and terms of use.
